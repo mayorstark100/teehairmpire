@@ -1,117 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chic Air Brand</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    /* Reset & Base */
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
-    body { line-height: 1.6; background: #f9f9f9; color: #333; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TeeHairMpire</title>
 
-    /* Header / Hero */
-    header {
-      background: url('https://images.unsplash.com/photo-1581091215361-38f2e5f7e8c2?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-      position: relative;
-    }
-    header::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.5);
-    }
-    header h1, header p {
-      position: relative;
-      z-index: 1;
-    }
-    header h1 { font-size: 4rem; margin-bottom: 20px; }
-    header p { font-size: 1.5rem; }
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
 
-    /* Sections */
-    section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
-    h2 { text-align: center; margin-bottom: 40px; font-size: 2.5rem; color: #222; }
+<style>
 
-    /* Gallery */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 12px;
-      transition: transform 0.3s ease;
-    }
-    .gallery img:hover { transform: scale(1.05); }
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
 
-    /* Contact */
-    .contact {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 15px;
-    }
-    .contact a {
-      text-decoration: none;
-      color: white;
-      background-color: #007bff;
-      padding: 12px 20px;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
-    }
-    .contact a:hover { background-color: #0056b3; }
+body{background:#faf7f5;color:#333}
 
-    /* Footer */
-    footer { text-align: center; padding: 20px; background-color: #222; color: white; }
+/* HERO */
+.hero{
+height:100vh;
+background:url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9") center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+}
 
-    @media(max-width: 768px){
-      header h1 { font-size: 3rem; }
-      header p { font-size: 1.2rem; }
-    }
-  </style>
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.6);
+}
+
+.hero div{
+position:relative;
+color:white;
+text-align:center;
+animation:fade 2s;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(40px)}
+to{opacity:1;transform:none}
+}
+
+.hero h1{font-family:Playfair Display;font-size:4rem}
+.hero p{margin-top:10px}
+
+/* SECTION */
+section{padding:70px 20px;max-width:1100px;margin:auto}
+h2{text-align:center;font-family:Playfair Display;margin-bottom:30px}
+
+/* PRODUCTS */
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+transition:.4s;
+}
+
+.card:hover{transform:translateY(-10px)}
+
+.card img{width:100%;height:250px;object-fit:cover}
+
+.card div{padding:15px;text-align:center}
+
+.price{font-weight:bold;margin-top:5px}
+
+/* BUTTONS */
+.btn{
+display:inline-block;
+background:black;
+color:white;
+padding:10px 25px;
+border-radius:30px;
+text-decoration:none;
+margin-top:10px;
+}
+
+/* FORM */
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+max-width:400px;
+margin:auto;
+}
+
+input,textarea{
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+/* FOOTER */
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
 </head>
+
 <body>
 
-  <!-- Hero Section -->
-  <header>
-    <h1>Chic Air Brand</h1>
-    <p>Experience the Air Like Never Before</p>
-  </header>
+<div class="hero">
+<div>
+<h1>TeeHairMpire</h1>
+<p>Luxury Hair • Beauty • Confidence</p>
+</div>
+</div>
 
-  <!-- Recent Air Products -->
-  <section>
-    <h2>Our Latest Air Collection</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1600251198370-9f7ad5c0a5d5?auto=format&fit=crop&w=800&q=80" alt="Air Product 1">
-      <img src="https://images.unsplash.com/photo-1609876607361-5c7b0c0f9a8a?auto=format&fit=crop&w=800&q=80" alt="Air Product 2">
-      <img src="https://images.unsplash.com/photo-1611078482628-3d17b3bbf246?auto=format&fit=crop&w=800&q=80" alt="Air Product 3">
-      <img src="https://images.unsplash.com/photo-1609940340886-7f0c60c391f1?auto=format&fit=crop&w=800&q=80" alt="Air Product 4">
-    </div>
-  </section>
+<section>
+<h2>Our Collections</h2>
 
-  <!-- Contact Section -->
-  <section>
-    <h2>Contact the Owner</h2>
-    <div class="contact">
-      <p><strong>Owner:</strong> John Doe</p>
-      <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
-      <a href="https://facebook.com/johndoe" target="_blank">Facebook</a>
-      <p>Email: john.doe@example.com</p>
-    </div>
-  </section>
+<div class="products">
 
-  <footer>
-    &copy; 2026 Chic Air Brand. All rights reserved.
-  </footer>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519">
+<div>
+Body Wave Wig
+<p class="price">$150</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1">
+<div>
+Straight Bundle
+<p class="price">$120</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1620786514935-5a9a4bd6f5ae">
+<div>
+Curly Closure
+<p class="price">$90</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+<h2>Place Order</h2>
+
+<form>
+<input placeholder="Your Name" required>
+<input placeholder="Phone Number" required>
+<textarea placeholder="Hair Type / Length"></textarea>
+<button class="btn">Submit</button>
+</form>
+
+</section>
+
+<section style="text-align:center">
+<h2>Contact Owner</h2>
+
+<a class="btn" href="https://wa.me/1234567890">WhatsApp</a>
+<a class="btn" href="https://facebook.com/yourfacebook">Facebook</a>
+
+<p style="margin-top:15px">Email: teehairmpire@gmail.com</p>
+
+</section>
+
+<footer>
+© 2026 TeeHairMpire — Luxury Hair Brand
+</footer>
 
 </body>
 </html>
