@@ -9,9 +9,17 @@
 
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
+}
 
-body{background:#faf7f5;color:#333}
+body{
+background:#fff;
+color:#444;
+}
 
 /* HERO */
 .hero{
@@ -27,27 +35,35 @@ position:relative;
 content:"";
 position:absolute;
 inset:0;
-background:rgba(0,0,0,.6);
+background:rgba(255,105,180,.6);
 }
 
 .hero div{
 position:relative;
 color:white;
 text-align:center;
-animation:fade 2s;
 }
 
-@keyframes fade{
-from{opacity:0;transform:translateY(40px)}
-to{opacity:1;transform:none}
+.hero h1{
+font-family:Playfair Display;
+font-size:4rem;
 }
 
-.hero h1{font-family:Playfair Display;font-size:4rem}
 .hero p{margin-top:10px}
 
 /* SECTION */
-section{padding:70px 20px;max-width:1100px;margin:auto}
-h2{text-align:center;font-family:Playfair Display;margin-bottom:30px}
+section{
+padding:70px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+h2{
+text-align:center;
+font-family:Playfair Display;
+color:#ff4fa3;
+margin-bottom:30px;
+}
 
 /* PRODUCTS */
 .products{
@@ -60,22 +76,35 @@ gap:20px;
 background:white;
 border-radius:15px;
 overflow:hidden;
-box-shadow:0 5px 20px rgba(0,0,0,.1);
+box-shadow:0 5px 20px rgba(255,79,163,.2);
 transition:.4s;
 }
 
-.card:hover{transform:translateY(-10px)}
+.card:hover{
+transform:translateY(-10px);
+}
 
-.card img{width:100%;height:250px;object-fit:cover}
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
 
-.card div{padding:15px;text-align:center}
+.card div{
+padding:15px;
+text-align:center;
+}
 
-.price{font-weight:bold;margin-top:5px}
+.price{
+font-weight:bold;
+color:#ff4fa3;
+margin-top:5px;
+}
 
 /* BUTTONS */
 .btn{
 display:inline-block;
-background:black;
+background:#ff4fa3;
 color:white;
 padding:10px 25px;
 border-radius:30px;
@@ -95,12 +124,12 @@ margin:auto;
 input,textarea{
 padding:12px;
 border-radius:8px;
-border:1px solid #ccc;
+border:1px solid #ffb6d9;
 }
 
 /* FOOTER */
 footer{
-background:black;
+background:#ff4fa3;
 color:white;
 text-align:center;
 padding:20px;
@@ -120,12 +149,12 @@ margin-top:40px;
 </div>
 
 <section>
-<h2>Our Collections</h2>
+<h2>Our Hair Collections</h2>
 
 <div class="products">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519">
+<img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1">
 <div>
 Body Wave Wig
 <p class="price">$150</p>
@@ -133,9 +162,9 @@ Body Wave Wig
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1">
+<img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519">
 <div>
-Straight Bundle
+Straight Hair Bundle
 <p class="price">$120</p>
 </div>
 </div>
@@ -149,23 +178,22 @@ Curly Closure
 </div>
 
 </div>
-
 </section>
 
 <section>
-<h2>Place Order</h2>
+<h2>Order Your Hair</h2>
 
 <form>
 <input placeholder="Your Name" required>
 <input placeholder="Phone Number" required>
-<textarea placeholder="Hair Type / Length"></textarea>
-<button class="btn">Submit</button>
+<textarea placeholder="Hair Type, Length & Quantity"></textarea>
+<button class="btn">Submit Order</button>
 </form>
 
 </section>
 
 <section style="text-align:center">
-<h2>Contact Owner</h2>
+<h2>Contact TeeHairMpire</h2>
 
 <a class="btn" href="https://wa.me/1234567890">WhatsApp</a>
 <a class="btn" href="https://facebook.com/yourfacebook">Facebook</a>
